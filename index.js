@@ -175,6 +175,7 @@ FeedRead.rss = function(xml, source, callback) {
         if (!art.children.length) return false;
         var obj = {
             title:     child_data(art, "title")
+          ,  id:        child_data(art, "id")
           , content:   scrub_html(child_data(art, "content:encoded"))
                     || scrub_html(child_data(art, "description"))
           , published: child_data(art, "pubDate")
